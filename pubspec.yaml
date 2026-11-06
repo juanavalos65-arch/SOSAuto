@@ -1,34 +1,22 @@
-name: seguridad_vial_app
-description: "Aplicación de seguridad vial con mapas y alertas de emergencia."
-publish_to: 'none'
-version: 1.0.0+1
+steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-environment:
-  sdk: '>=3.0.0 <4.0.0'
+      # 1. Configura el SDK de Flutter (Esto corrige el error)
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true # Acelera las futuras ejecuciones guardando la caché
 
-dependencies:
-  flutter:
-    sdk: flutter
+      # 2. Instala las dependencias con el comando correcto
+      - name: Install dependencies
+        run: flutter pub get
 
-  # Iconos adicionales estéticos (opcional)
-  cupertino_icons: ^1.0.6
+      # 3. Analiza el código del proyecto
+      - name: Analyze project source
+        run: flutter analyze
 
-  # Geolocalización: Captura las coordenadas GPS cuando se oprimen los botones
-  geolocator: ^13.0.0
-
-  # Mapas: Motor de mapas interactivos de código abierto (OpenStreetMap)
-  flutter_map: ^8.0.0
-
-  # Herramienta matemática necesaria para manejar coordenadas (Latitud, Longitud)
-  latlong2: ^0.9.1
-
-  # Conexión Backend: Para enviar las alertas y registrar usuarios/pautas en tu servidor
-  http: ^1.2.0
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^5.0.0
-
-flutter:
-  uses-material-design: true
+      # 4. Ejecuta las pruebas automatizadas
+      - name: Run tests
+        run: flutter test
