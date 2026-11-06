@@ -10,7 +10,7 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter-h
+    sdk: flutter
 
   # Dependencias clave para una app de SOS:
   geolocator: ^10.1.0      # Obtiene las coordenadas GPS del vehículo
