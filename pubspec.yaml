@@ -15,7 +15,7 @@ dependencies:
   # Dependencias clave para una app de SOS:
   geolocator: ^10.1.0      # Obtiene las coordenadas GPS del vehículo
   geocoding: ^3.0.0       # Traduce coordenadas a direcciones legibles
-  flutter_sms: ^0.2.1     # Envía alertas automáticas por SMS
+  flutter_sms: ^3.0.1     # Envía alertas automáticas por SMS
   url_launcher: ^6.2.5    # Permite llamar directamente a grúas o líneas de emergencia
   sensors_plus: ^5.0.1    # Detecta frenazos bruscos o impactos usando el acelerómetro
 
