@@ -75,3 +75,37 @@ class AiService {
     }
   }
 }
+name: sos_auto
+description: "Aplicación de asistencia vehicular de emergencia en carretera con IA integrada."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0 # Asegura compatibilidad con Flutter moderno y Null Safety
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- Capa de Comunicación e Inteligencia Artificial ---
+  http: ^1.2.0 # Necesario para conectarse directamente a la API de OpenAI
+
+  # --- Capa de Ubicación y Mapas (Esenciales para SOS Auto) ---
+  geolocator: ^13.0.0 # Para obtener las coordenadas GPS exactas del usuario varado
+  google_maps_flutter: ^2.12.0 # Para mostrar el mapa y las grúas cercanas en tiempo real
+
+  # --- Capa de Interfaz y Utilidades ---
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Si en el futuro necesitas añadir iconos personalizados de SOS o alertas, los descomentas aquí:
+  # assets:
+  #   - assets/images/
