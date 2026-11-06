@@ -24,7 +24,7 @@ jobs:
         run: flutter pub get
 
       - name: Check formatting
-        run: flutter-h --set-exit-if-changed .
+        run: flutter comand-h -set-exit-if-changed .
 
       - name: Analyze project source
         run: flutter analyze
