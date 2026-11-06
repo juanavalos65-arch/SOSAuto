@@ -1,1 +1,34 @@
+name: seguridad_vial_app
+description: "Aplicación de seguridad vial con mapas y alertas de emergencia."
+publish_to: 'none'
+version: 1.0.0+1
 
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Iconos adicionales estéticos (opcional)
+  cupertino_icons: ^1.0.6
+
+  # Geolocalización: Captura las coordenadas GPS cuando se oprimen los botones
+  geolocator: ^13.0.0
+
+  # Mapas: Motor de mapas interactivos de código abierto (OpenStreetMap)
+  flutter_map: ^8.0.0
+
+  # Herramienta matemática necesaria para manejar coordenadas (Latitud, Longitud)
+  latlong2: ^0.9.1
+
+  # Conexión Backend: Para enviar las alertas y registrar usuarios/pautas en tu servidor
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
